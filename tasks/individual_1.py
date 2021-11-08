@@ -11,16 +11,13 @@
 """
 
 
-def fun1(a):
-    def fun2(b):
-        return a + b + a[0] + '/' + a[1::]
+def fun1():
+    def fun2(tag, s):
+        tag1 = '<' + tag + '>'
+        tag2 = tag1[0] + '/' + tag1[1::]
+        return "".join([tag1, s, tag2])
     return fun2
 
 
 if __name__ == '__main__':
-    # Запрашиваем переменные
-    tag = str(input("Введите тег: "))
-    s = str(input("Введите строку: "))
-
-    # Вызов функции
-    print(fun1(tag)(s))
+    print(fun1()(input('Введите тег: '), input('Введите строку: ')))
