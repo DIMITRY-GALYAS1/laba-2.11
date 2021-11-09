@@ -13,9 +13,15 @@
 
 def fun1():
     def fun2(tag, s):
-        tag1 = '<' + tag + '>'
-        tag2 = tag1[0] + '/' + tag1[1::]
-        return "".join([tag1, s, tag2])
+        result = []
+        result.append("<")
+        result.append(tag)
+        result.append(">")
+        result.append(s)
+        result.append("</")
+        result.append(tag)
+        result.append(">")
+        return "".join(result)
     return fun2
 
 
