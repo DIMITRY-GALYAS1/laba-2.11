@@ -11,8 +11,8 @@
 """
 
 
-def fun1():
-    def fun2(tag, s):
+def fun1(tag):
+    def fun2(s):
         result = []
         result.append("<")
         result.append(tag)
@@ -26,4 +26,4 @@ def fun1():
 
 
 if __name__ == '__main__':
-    print(fun1()(input('Введите тег: '), input('Введите строку: ')))
+    print(fun1(input('Введите тег: '))(input('Введите строку: ')))
